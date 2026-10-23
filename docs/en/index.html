@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,41 +12,47 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="Vsoft home"><span class="brand-mark">V</span><span>Vsoft</span></a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#apps">Apps</a><a href="#contact" data-contact-nav hidden>Contact</a>
-    </nav>
-    <a class="language-switch" href="../fa/" lang="fa" dir="rtl">فارسی ↗</a>
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="Vsoft home"><span class="brand-mark" aria-hidden="true">V</span><span>Vsoft</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#apps">Apps</a><a href="#contact" data-contact-nav hidden>Contact</a>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme" title="Toggle theme"><span data-theme-icon aria-hidden="true">☼</span></button>
+        <a class="language-switch" href="../fa/" lang="fa" dir="rtl">فارسی <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
   </header>
   <main>
-    <section class="hero section-wrap">
-      <div class="hero-copy">
+    <section class="hero section-wrap" id="top">
+      <div class="hero-copy" data-reveal>
         <span class="eyebrow"><span class="status-dot"></span> INDEPENDENT SOFTWARE DEVELOPMENT</span>
         <h1>A simpler experience<br><span>in a world of software.</span></h1>
         <p class="hero-text">Building Android applications with a focus on simplicity, usability, and user experience.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#apps">Explore projects <span aria-hidden="true">→</span></a><a class="text-link" href="#about">About the developer</a></div>
+        <div class="hero-actions"><a class="button button-primary" href="#apps">Explore projects <span aria-hidden="true">→</span></a><a class="text-link" href="#about">About the developer <span aria-hidden="true">↘</span></a></div>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <div class="app-tile tile-back"><span class="tile-symbol">✳</span><span class="tile-caption">Useful by design</span></div>
         <div class="app-tile tile-front"><span class="tile-logo">V.</span><span class="tile-caption">Thoughtful software</span><span class="tile-line"></span><span class="tile-line short"></span></div>
         <span class="floating-chip chip-top">Android · Apps</span><span class="floating-chip chip-bottom">Simple. Useful.</span>
       </div>
     </section>
-    <section class="intro-band"><div class="section-wrap intro-inner"><span class="intro-index">01 / OUR APPROACH</span><p>Good software should make everyday tasks <strong>clearer, smoother, and simpler.</strong></p></div></section>
-    <section class="content-section section-wrap" id="about">
+    <section class="intro-band" data-reveal><div class="section-wrap intro-inner"><span class="intro-index">01 / OUR APPROACH</span><p>Good software should make everyday tasks <strong>clearer, smoother, and simpler.</strong></p></div></section>
+    <section class="content-section section-wrap" id="about" data-reveal>
       <div class="section-heading"><span class="eyebrow">ABOUT THE DEVELOPER</span><h2>Built with attention to detail.</h2></div>
       <div class="about-grid"><p class="lead">I'm Vahid, an independent software developer building products under the Vsoft brand.</p><p class="body-copy">My focus is on practical Android applications with simple interfaces and intuitive user experiences. This website is the home for project information and official product updates.</p></div>
     </section>
     <section class="content-section apps-section" id="apps">
       <div class="section-wrap">
-        <div class="section-heading heading-row"><div><span class="eyebrow">SELECTED WORK</span><h2>Applications</h2></div><span class="section-note">Android products and projects</span></div>
-        <article class="app-card">
+        <div class="section-heading heading-row" data-reveal><div><span class="eyebrow">SELECTED WORK</span><h2>Applications</h2></div><span class="section-note">Android products and projects</span></div>
+        <article class="app-card" data-reveal>
           <div class="app-icon" aria-hidden="true">Ve<span>.</span></div>
           <div class="app-info"><span class="app-label">ANDROID APPLICATION</span><h3>Vesta</h3><p>A personal finance app with a Persian interface and Jalali calendar. App data is stored locally on the device.</p><span class="status-label"><span class="status-dot"></span> In development</span></div>
-          <a class="button button-muted marketplace-link" data-marketplace="vesta" href="#" hidden>View on marketplace ↗</a>
+          <a class="button button-muted marketplace-link" data-marketplace="vesta" href="#" hidden>View on marketplace <span aria-hidden="true">↗</span></a>
         </article>
-        <p class="apps-footnote">Official download links will be added after publication.</p>
+        <p class="apps-footnote" data-reveal>Official download links will be added after publication.</p>
       </div>
     </section>
     <section class="contact-section section-wrap" id="contact" data-contact-section hidden>
@@ -54,6 +60,8 @@
       <a class="button button-primary" data-contact-email href="#" hidden>Send an email ↗</a>
     </section>
   </main>
-  <footer class="site-footer section-wrap"><a class="brand footer-brand" href="./"><span class="brand-mark">V</span><span>Vsoft</span></a><p>Independent software development · Vahid</p><span>© <span data-year></span> Vsoft</span></footer>
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner"><a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true">V</span><span>Vsoft</span></a><p>Independent software development · Vahid</p><div class="footer-meta"><a href="#top">Back to top ↑</a><span>© <span data-year></span> Vsoft</span></div></div>
+  </footer>
 </body>
 </html>
