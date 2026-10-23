@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,41 +12,47 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./" aria-label="صفحه اصلی Vsoft"><span class="brand-mark">V</span><span>Vsoft</span></a>
-    <nav class="nav" aria-label="پیمایش اصلی">
-      <a href="#about">درباره</a><a href="#apps">اپلیکیشن‌ها</a><a href="#contact" data-contact-nav hidden>ارتباط</a>
-    </nav>
-    <a class="language-switch" href="../en/" lang="en" dir="ltr">English ↗</a>
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="صفحه اصلی Vsoft"><span class="brand-mark" aria-hidden="true">V</span><span>Vsoft</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="باز کردن منو"><span></span><span></span></button>
+      <nav class="nav" id="primary-nav" aria-label="پیمایش اصلی">
+        <a href="#about">درباره</a><a href="#apps">اپلیکیشن‌ها</a><a href="#contact" data-contact-nav hidden>ارتباط</a>
+      </nav>
+      <div class="header-tools">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="تغییر پوسته" title="تغییر پوسته"><span data-theme-icon aria-hidden="true">☼</span></button>
+        <a class="language-switch" href="../en/" lang="en" dir="ltr">English <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
   </header>
   <main>
-    <section class="hero section-wrap">
-      <div class="hero-copy">
+    <section class="hero section-wrap" id="top">
+      <div class="hero-copy" data-reveal>
         <span class="eyebrow"><span class="status-dot"></span> توسعه مستقل نرم‌افزار</span>
         <h1>تجربه‌ای ساده‌تر<br><span>از دنیای نرم‌افزار</span></h1>
         <p class="hero-text">توسعه اپلیکیشن‌های اندرویدی با تمرکز بر سادگی، کاربردپذیری و تجربه کاربری.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#apps">مشاهده پروژه‌ها <span aria-hidden="true">←</span></a><a class="text-link" href="#about">درباره توسعه‌دهنده</a></div>
+        <div class="hero-actions"><a class="button button-primary" href="#apps">مشاهده پروژه‌ها <span aria-hidden="true">←</span></a><a class="text-link" href="#about">درباره توسعه‌دهنده <span aria-hidden="true">↙</span></a></div>
       </div>
       <div class="hero-art" aria-hidden="true">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <div class="app-tile tile-back"><span class="tile-symbol">✳</span><span class="tile-caption">Useful by design</span></div>
         <div class="app-tile tile-front"><span class="tile-logo">V.</span><span class="tile-caption">Thoughtful software</span><span class="tile-line"></span><span class="tile-line short"></span></div>
         <span class="floating-chip chip-top">Android · Apps</span><span class="floating-chip chip-bottom">Simple. Useful.</span>
       </div>
     </section>
-    <section class="intro-band"><div class="section-wrap intro-inner"><span class="intro-index">01 / رویکرد</span><p>نرم‌افزار خوب باید کارهای روزمره را <strong>روان‌تر، روشن‌تر و ساده‌تر</strong> کند.</p></div></section>
-    <section class="content-section section-wrap" id="about">
+    <section class="intro-band" data-reveal><div class="section-wrap intro-inner"><span class="intro-index">۰۱ / رویکرد</span><p>نرم‌افزار خوب باید کارهای روزمره را <strong>روان‌تر، روشن‌تر و ساده‌تر</strong> کند.</p></div></section>
+    <section class="content-section section-wrap" id="about" data-reveal>
       <div class="section-heading"><span class="eyebrow">درباره توسعه‌دهنده</span><h2>ساخته‌شده با توجه به جزئیات.</h2></div>
       <div class="about-grid"><p class="lead">من وحید هستم؛ توسعه‌دهنده مستقل نرم‌افزار و سازنده محصولات تحت برند Vsoft.</p><p class="body-copy">تمرکز من بر طراحی و توسعه اپلیکیشن‌های اندرویدی کاربردی با رابطی ساده و تجربه‌ای قابل‌فهم است. این وب‌سایت محل معرفی پروژه‌ها و انتشار اطلاعات رسمی آن‌هاست.</p></div>
     </section>
     <section class="content-section apps-section" id="apps">
       <div class="section-wrap">
-        <div class="section-heading heading-row"><div><span class="eyebrow">پروژه‌ها</span><h2>اپلیکیشن‌ها</h2></div><span class="section-note">محصولات و پروژه‌های اندرویدی</span></div>
-        <article class="app-card">
+        <div class="section-heading heading-row" data-reveal><div><span class="eyebrow">پروژه‌ها</span><h2>اپلیکیشن‌ها</h2></div><span class="section-note">محصولات و پروژه‌های اندرویدی</span></div>
+        <article class="app-card" data-reveal>
           <div class="app-icon" aria-hidden="true">Ve<span>.</span></div>
           <div class="app-info"><span class="app-label">ANDROID APPLICATION</span><h3>Vesta</h3><p>اپلیکیشن مدیریت مالی شخصی با رابط فارسی و تقویم شمسی؛ اطلاعات برنامه به‌صورت محلی روی دستگاه نگهداری می‌شود.</p><span class="status-label"><span class="status-dot"></span> در حال توسعه</span></div>
-          <a class="button button-muted marketplace-link" data-marketplace="vesta" href="#" hidden>مشاهده در بازار ↗</a>
+          <a class="button button-muted marketplace-link" data-marketplace="vesta" href="#" hidden>مشاهده در بازار <span aria-hidden="true">↗</span></a>
         </article>
-        <p class="apps-footnote">پیوندهای دریافت رسمی پس از انتشار اپلیکیشن اضافه خواهند شد.</p>
+        <p class="apps-footnote" data-reveal>پیوندهای دریافت رسمی پس از انتشار اپلیکیشن اضافه خواهند شد.</p>
       </div>
     </section>
     <section class="contact-section section-wrap" id="contact" data-contact-section hidden>
@@ -54,6 +60,8 @@
       <a class="button button-primary" data-contact-email href="#" hidden>ارسال ایمیل ↗</a>
     </section>
   </main>
-  <footer class="site-footer section-wrap"><a class="brand footer-brand" href="./"><span class="brand-mark">V</span><span>Vsoft</span></a><p>توسعه مستقل نرم‌افزار · Vahid</p><span>© <span data-year></span> Vsoft</span></footer>
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner"><a class="brand footer-brand" href="./"><span class="brand-mark" aria-hidden="true">V</span><span>Vsoft</span></a><p>توسعه مستقل نرم‌افزار · Vahid</p><div class="footer-meta"><a href="#top">بازگشت به بالا ↑</a><span>© <span data-year></span> Vsoft</span></div></div>
+  </footer>
 </body>
 </html>
