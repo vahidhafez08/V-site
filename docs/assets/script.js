@@ -75,7 +75,7 @@ if (menuToggle && navigation) {
       ? (!isOpen ? "بستن منو" : "باز کردن منو")
       : (!isOpen ? "Close menu" : "Open menu"));
   });
-  navigation.querySelectorAll('a[href^="#"]').forEach((link) => {
+  navigation.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
   document.addEventListener("keydown", (event) => {
