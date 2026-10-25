@@ -173,3 +173,9 @@ html[data-theme="dark"] .vsoft-home{background:#f7f9fd;color:#13203b}
 html[data-theme="dark"] .vsoft-home .home-hero{background:radial-gradient(ellipse at 72% 55%,#12366b 0,transparent 37%),linear-gradient(120deg,#071126,#101f43 56%,#09162e);color:#f7f9ff}
 html[data-theme="dark"] .vsoft-home .hero-copy p{color:#c3cde0}
 html[data-theme="light"] .vsoft-home .theme-toggle{background:#eef5ff}
+
+/* Shared self-hosted font system on both brand and product pages */
+html[lang="fa"] body{font-family:Vazirmatn,Tahoma,"Segoe UI",sans-serif;line-height:1.85}
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3,html[lang="fa"] h4{font-family:Estedad,Vazirmatn,Tahoma,sans-serif;line-height:1.45}
+html[lang="en"] body{font-family:PlusJakartaSans,Inter,"Segoe UI",sans-serif}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3,html[lang="en"] h4{font-family:PlusJakartaSans,Inter,sans-serif;line-height:1.4}
