@@ -4,6 +4,8 @@
  */
 const VSOFT_SITE_CONFIG = {
   contactEmail: "",
+  githubUrl: "https://github.com/Vahidhafez08",
+  telegramUrl: "",
   downloadUrl: "https://github.com/vahidhafez08/Vsoft-2/releases/download/1.0.0v/vsoft-release.apk",
   marketplaceLinks: {
     vesta: ""
@@ -169,3 +171,10 @@ document.querySelectorAll("[data-download-link]").forEach((link) => {
     link.textContent = root.lang === "fa" ? "به‌زودی" : "Coming soon";
   }
 });
+
+// Optional footer contact links remain hidden until configured.
+const contactLinks = { github: VSOFT_SITE_CONFIG.githubUrl, telegram: VSOFT_SITE_CONFIG.telegramUrl, email: VSOFT_SITE_CONFIG.contactEmail ? "mailto:" + VSOFT_SITE_CONFIG.contactEmail : "" };
+document.querySelectorAll("[data-contact-link]").forEach((link) => { const url = contactLinks[link.dataset.contactLink] || ""; if (url.trim()) { link.href = url.trim(); link.hidden = false; if (!url.startsWith("mailto:")) { link.target = "_blank"; link.rel = "noopener noreferrer"; } } });
+
+document.querySelectorAll("[data-contact-email-link]").forEach((link) => { const email = VSOFT_SITE_CONFIG.contactEmail.trim(); if (email) { link.href = "mailto:" + email; link.hidden = false; } });
+document.querySelectorAll("[data-contact-links]").forEach((box) => { const links = box.querySelectorAll("a:not([hidden])"); box.hidden = !links.length; });
