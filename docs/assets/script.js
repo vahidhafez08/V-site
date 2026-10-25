@@ -4,6 +4,7 @@
  */
 const VSOFT_SITE_CONFIG = {
   contactEmail: "",
+  downloadUrl: "https://github.com/vahidhafez08/Vsoft-2/releases/download/1.0.0v/vsoft-release.apk",
   marketplaceLinks: {
     vesta: ""
   }
@@ -149,5 +150,22 @@ document.querySelectorAll("[data-marketplace]").forEach((link) => {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.hidden = false;
+  }
+});
+
+// Vesta download URL is configured once in VSOFT_SITE_CONFIG.downloadUrl.
+document.querySelectorAll("[data-download-link]").forEach((link) => {
+  const url = typeof VSOFT_SITE_CONFIG.downloadUrl === "string" ? VSOFT_SITE_CONFIG.downloadUrl.trim() : "";
+  if (url) {
+    link.href = url;
+    link.removeAttribute("aria-disabled");
+    link.classList.remove("is-disabled");
+    link.setAttribute("download", "vsoft-release.apk");
+    link.textContent = root.lang === "fa" ? "دانلود نسخه اندروید ↓" : "Download Android APK ↓";
+  } else {
+    link.removeAttribute("href");
+    link.setAttribute("aria-disabled", "true");
+    link.classList.add("is-disabled");
+    link.textContent = root.lang === "fa" ? "به‌زودی" : "Coming soon";
   }
 });
