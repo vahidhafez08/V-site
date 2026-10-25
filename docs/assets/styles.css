@@ -164,3 +164,12 @@ html[lang=en] .vsoft-home{font-family:PlusJakartaSans,Inter,"Segoe UI",sans-seri
 .theme-toggle{border:1px solid #e0e8f7;background:#fff;color:#1d4279;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;font-size:1rem}.theme-toggle:hover{background:#edf5ff}
 .vsoft-home[data-theme="light"] .home-hero{background:radial-gradient(ellipse at 72% 55%,#d5eaff 0,transparent 40%),linear-gradient(120deg,#eaf3ff,#f4f9ff 56%,#eaf4ff);color:#13203b}.vsoft-home[data-theme="light"] .hero-copy p{color:#516584}.vsoft-home[data-theme="light"] .phone-front{box-shadow:0 24px 45px #10264a26}.vsoft-home[data-theme="light"] .home-header{background:#ffffffed}
 @media(max-width:640px){.theme-toggle{width:34px;height:34px}.header-actions{gap:6px}}
+
+/* Explicit theme colors for the brand home */
+html[data-theme="light"] .vsoft-home{background:#f7f9fd;color:#13203b}
+html[data-theme="light"] .vsoft-home .home-hero{background:radial-gradient(ellipse at 72% 55%,#d5eaff 0,transparent 40%),linear-gradient(120deg,#eaf3ff,#f4f9ff 56%,#eaf4ff);color:#13203b}
+html[data-theme="light"] .vsoft-home .hero-copy p{color:#516584}
+html[data-theme="dark"] .vsoft-home{background:#f7f9fd;color:#13203b}
+html[data-theme="dark"] .vsoft-home .home-hero{background:radial-gradient(ellipse at 72% 55%,#12366b 0,transparent 37%),linear-gradient(120deg,#071126,#101f43 56%,#09162e);color:#f7f9ff}
+html[data-theme="dark"] .vsoft-home .hero-copy p{color:#c3cde0}
+html[data-theme="light"] .vsoft-home .theme-toggle{background:#eef5ff}
