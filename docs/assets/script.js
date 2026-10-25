@@ -4,9 +4,9 @@
  */
 const VSOFT_SITE_CONFIG = {
   contactEmail: "",
-  githubUrl: "https://github.com/Vahidhafez08",
+  githubUrl: "",
   telegramUrl: "",
-  downloadUrl: "https://github.com/vahidhafez08/Vsoft-2/releases/download/1.0.0v/vsoft-release.apk",
+  downloadUrl: "",
   marketplaceLinks: {
     vesta: ""
   }
